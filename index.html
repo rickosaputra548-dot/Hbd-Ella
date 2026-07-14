@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HBD YAH</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Tombol Musik -->
+  <div class="music-control">
+    <button onclick="toggleMusic()" id="musicBtn">🔊 Nyalakan Musik</button>
+  </div>
+
+  <!-- Header -->
+  <header onclick="showConfetti()">
+    <h1>Selamat Ulang Tahun Yak :></h1>
+    <p>COBA KLIK TEXT INI!</p>
+  </header>
+
+  <!-- Galeri Foto -->
+  <section class="gallery">
+    <h2>Foto Kamu??</h2>
+    <div class="photo-container">
+      <img src="c:\Users\RICKO SAPUTRA\OneDrive\Documents\ella 22.jpeg" alt="Foto 1" onclick="openImage(this.src)" />
+      <img src="c:\Users\RICKO SAPUTRA\OneDrive\Documents\ella 99.jpeg" alt="Foto 2" onclick="openImage(this.src)" />
+      <img src="c:\Users\RICKO SAPUTRA\OneDrive\Documents\ella 88.jpeg" alt="Foto 3" onclick="openImage(this.src)" />
+    </div>
+  </section>
+
+  <!-- Game Mini -->
+  <section class="game">
+    <h2>Main game bentar yuk, tebak angka 1-20 :></h2>
+    <p>Skor: <span id="score">0</span></p>
+    <input type="number" id="guess" min="1" max="20" />
+    <button onclick="checkGuess()">Tebak!</button>
+    <p id="game-result"></p>
+  </section>
+
+  <!-- Popup Gambar -->
+  <div id="popup" class="popup" onclick="closeImage()">
+    <img id="popup-img" src="" alt="Zoomed" />
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Ciee ulang tahun 15 juli 🤭</p>
+  </footer>
+
+  <!-- Audio -->
+  <audio id="bg-music" loop>
+    <source src="c:\Users\RICKO SAPUTRA\OneDrive\Documents\WhatsApp Audio 2025-07-23 at 11.52.07_ebea23f3.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
